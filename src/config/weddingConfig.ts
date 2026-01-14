@@ -4,6 +4,7 @@
 // ============================================
 
 import heroMainImage from "@/assets/logo_TS-Monogram.png";
+import heroBackgroundImage from "@/assets/hero_background-improved.png";
 
 export const weddingConfig = {
   // ============================================
@@ -54,7 +55,7 @@ export const weddingConfig = {
   // HERO SECTION IMAGES
   // ============================================
   images: {
-    heroBackground: "https://e-card.manitawedding.com/wp-content/uploads/2024/11/R17-050-9-1-scaled.jpg",
+    heroBackground: heroBackgroundImage,
     heroMain: heroMainImage,
     divider1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-18.png",
     divider2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-21.png",
