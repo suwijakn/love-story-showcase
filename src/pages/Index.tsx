@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/wedding/HeroSection";
+import Divider from "@/components/wedding/Divider";
+import IntroCards from "@/components/wedding/IntroCards";
+import CountdownSection from "@/components/wedding/CountdownSection";
+import LargePhotoSection from "@/components/wedding/LargePhotoSection";
+import GallerySection from "@/components/wedding/GallerySection";
+import RSVPSection from "@/components/wedding/RSVPSection";
+import LocationSection from "@/components/wedding/LocationSection";
+import Footer from "@/components/wedding/Footer";
+import MobileNav from "@/components/wedding/MobileNav";
+import { weddingConfig } from "@/config/weddingConfig";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative pb-16 md:pb-0">
+      <HeroSection />
+      <Divider src={weddingConfig.images.divider1} />
+      <IntroCards />
+      <CountdownSection />
+      <LargePhotoSection />
+      <GallerySection />
+      <RSVPSection />
+      <LocationSection />
+      <Footer />
+      <MobileNav />
     </div>
   );
 };
