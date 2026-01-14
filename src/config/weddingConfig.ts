@@ -3,6 +3,8 @@
 // Edit this file to customize your wedding invitation
 // ============================================
 
+import heroMainImage from "@/assets/logo_TS-Monogram.png";
+
 export const weddingConfig = {
   // ============================================
   // COUPLE INFORMATION
@@ -53,7 +55,7 @@ export const weddingConfig = {
   // ============================================
   images: {
     heroBackground: "https://e-card.manitawedding.com/wp-content/uploads/2024/11/R17-050-9-1-scaled.jpg",
-    heroMain: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-051-1.png",
+    heroMain: heroMainImage,
     divider1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-18.png",
     divider2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-21.png",
     divider3: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-1.png",
