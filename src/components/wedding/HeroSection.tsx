@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={images.heroBackground}
-          className="w-full h-full object-cover object-[92%_38%]"
+          className="w-full h-full object-cover object-[center_30%]"
           alt="Wedding Background"
         />
         <div className="absolute inset-0 bg-black/10" />
