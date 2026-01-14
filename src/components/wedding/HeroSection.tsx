@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
+      className="relative min-h-screen w-full overflow-hidden flex items-start justify-center"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -20,7 +20,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center mt-32 md:mt-0">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-16 md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const HeroSection = () => {
         >
           <img
             src={images.heroMain}
-            className="w-10/12 md:w-1/3 max-w-lg shadow-xl rounded-sm mb-6"
+            className="w-1/3 md:w-1/4 max-w-xs"
             alt="Couple Names"
           />
         </motion.div>
