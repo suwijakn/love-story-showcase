@@ -16,7 +16,7 @@ const IntroCards = () => {
         >
           <img
             src={images.introCard1}
-            className="w-full max-w-md mx-auto shadow-lg rounded hover:scale-[1.02] transition-transform duration-500 object-contain"
+            className="w-full max-w-md mx-auto hover:scale-[1.02] transition-transform duration-500 object-contain"
             alt="Wedding Details 1"
           />
         </motion.div>
@@ -29,7 +29,7 @@ const IntroCards = () => {
         >
           <img
             src={images.introCard2}
-            className="w-full max-w-md mx-auto shadow-lg rounded hover:scale-[1.02] transition-transform duration-500 object-contain"
+            className="w-full max-w-md mx-auto hover:scale-[1.02] transition-transform duration-500 object-contain"
             alt="Wedding Details 2"
           />
         </motion.div>
