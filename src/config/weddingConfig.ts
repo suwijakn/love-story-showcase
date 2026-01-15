@@ -14,33 +14,35 @@ export const weddingConfig = {
   // ============================================
   couple: {
     person1: {
-      name: "Koi",
-      fullName: "Korakoch",
+      name: "Pinky",
+      fullName: "Thawanya",
     },
     person2: {
-      name: "Bom",
-      fullName: "Bom",
+      name: "Guy",
+      fullName: "Suwijak",
     },
   },
 
-  // ============================================
+// ============================================
   // WEDDING DATE & TIME
   // ============================================
   event: {
-    date: new Date("2027-06-25T18:30:00"),
-    dateDisplay: "25 June 2027",
-    time: "18:30",
-    calendarFile: "https://e-card.manitawedding.com/wp-content/uploads/2025/06/R17-052.ics",
+    date: new Date("2026-02-20T18:00:00"), // Updated date/time
+    dateDisplay: "20 February 2026",       // Updated display text
+    time: "18:00 - 21:00",                 // Updated time
+    calendarFile: "/wedding-event.ics",    
   },
 
   // ============================================
   // VENUE INFORMATION
   // ============================================
   venue: {
-    name: "The Peninsula Bangkok Resort",
-    address: "333 Charoen Nakhon Rd, Khlong Ton Sai, Khlong San, Bangkok 10600",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.922840121669!2d100.50822567508972!3d13.723121186665773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298d3ecbfc7a7%3A0x57b57b2760cdcd37!2sThe%20Peninsula%20Bangkok!5e0!3m2!1sen!2sth!4v1733297210889!5m2!1sen!2sth",
-    directionsUrl: "https://maps.app.goo.gl/w53vCaiLrwmT8btc8",
+    name: "Rin at Raintree, Sila Hall",
+    address: "276 Soi Rama IX 17, Bang Kapi, Huai Khwang, Bangkok 10310",
+    // This uses a search-based embed that works without a specific API key
+    mapEmbedUrl: "https://maps.google.com/maps?q=Rin%20at%20Raintree%20Bangkok&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    // This link will open Google Maps with the destination pre-filled
+    directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Rin+at+Raintree+Bangkok",
   },
 
   // ============================================
