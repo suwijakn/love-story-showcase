@@ -16,8 +16,8 @@ const LocationSection = () => {
           className="mb-6"
         >
           <MapPin className="w-10 h-10 text-primary mx-auto mb-2" />
-          <h2 className="text-3xl font-serif font-light">The Venue</h2>
-          <h3 className="text-2xl font-medium mt-2">{venue.name}</h3>
+          <h2 className="text-3xl font-serif font-normal italic tracking-wide">The Venue</h2>
+          <h3 className="text-2xl font-light mt-2">{venue.name}</h3>
         </motion.div>
 
         <motion.div
