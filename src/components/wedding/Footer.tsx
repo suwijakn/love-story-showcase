@@ -4,7 +4,7 @@ const Footer = () => {
   const { footer } = weddingConfig;
 
   return (
-    <footer className="py-12 bg-secondary text-center pb-24 md:pb-12">
+    <footer className="py-8 bg-secondary text-center pb-24 md:pb-8">
       <p className="text-muted-foreground text-sm mb-4">{footer.poweredByText}</p>
       <img
         src={footer.logo}
