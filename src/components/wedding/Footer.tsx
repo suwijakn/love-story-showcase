@@ -8,7 +8,7 @@ const Footer = () => {
       <p className="text-muted-foreground text-sm mb-4">{footer.poweredByText}</p>
       <img
         src={footer.logo}
-        className="h-12 mx-auto mb-4"
+        className="h-10 sm:h-12 mx-auto mb-4 object-contain"
         alt="Wedding Planner Logo"
       />
       <a

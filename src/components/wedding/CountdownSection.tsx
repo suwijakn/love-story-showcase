@@ -23,7 +23,7 @@ const CountdownSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           src={images.programIcon}
-          className="w-24 md:w-32 mb-6"
+          className="w-20 sm:w-24 md:w-32 mb-6 object-contain"
           alt="Program Icon"
         />
 
@@ -34,7 +34,7 @@ const CountdownSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           src={images.dateText}
-          className="w-full md:w-2/3 mb-4"
+          className="w-11/12 sm:w-4/5 md:w-2/3 max-w-2xl mb-4 object-contain"
           alt="Wedding Date"
         />
         <motion.img
@@ -43,7 +43,7 @@ const CountdownSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           src={images.namesText}
-          className="w-full md:w-1/2 mb-8"
+          className="w-4/5 sm:w-2/3 md:w-1/2 max-w-xl mb-8 object-contain"
           alt="Couple Names"
         />
 

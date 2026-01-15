@@ -97,7 +97,7 @@ const GallerySection = () => {
                   >
                     <img
                       src={img}
-                      className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-md hover:opacity-95 transition-opacity"
+                      className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-lg shadow-md hover:opacity-95 transition-opacity"
                       loading="lazy"
                       alt={`Gallery image ${index + 1}`}
                     />
@@ -134,7 +134,7 @@ const GallerySection = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
               src={currentImage}
-              className="max-h-[90vh] max-w-full rounded shadow-2xl"
+              className="max-h-[85vh] max-w-[95vw] sm:max-w-[90vw] md:max-w-[85vw] object-contain rounded shadow-2xl"
               onClick={(e) => e.stopPropagation()}
               alt="Gallery Preview"
             />
