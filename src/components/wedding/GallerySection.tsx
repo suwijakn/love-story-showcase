@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 const GallerySection = () => {
   const { gallery } = weddingConfig;
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
+  const [api, setApi] = useState<CarouselApi>();
 
   const openLightbox = (imgUrl: string) => {
     setCurrentImage(imgUrl);
@@ -18,6 +27,17 @@ const GallerySection = () => {
     setLightboxOpen(false);
     document.body.style.overflow = "auto";
   };
+
+  // Autoplay logic
+  useEffect(() => {
+    if (!api) return;
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [api]);
 
   return (
     <section id="gallery" className="py-12 bg-background">
@@ -51,34 +71,44 @@ const GallerySection = () => {
         </div>
       </motion.div>
 
-      {/* Image Slider */}
-      <div className="relative container mx-auto">
+      {/* Image Carousel */}
+      <div className="container mx-auto px-4 md:px-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-2 px-4 pb-4"
+          className="relative"
         >
-          {gallery.images.map((img, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.02 }}
-              className="flex-shrink-0 w-1/3 md:w-1/4 snap-start cursor-pointer"
-              onClick={() => openLightbox(img)}
-            >
-              <img
-                src={img}
-                className="w-full h-64 md:h-80 object-cover rounded shadow-md hover:opacity-90 transition-opacity"
-                loading="lazy"
-                alt={`Gallery image ${index + 1}`}
-              />
-            </motion.div>
-          ))}
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-2xl mx-auto"
+          >
+            <CarouselContent>
+              {gallery.images.map((img, index) => (
+                <CarouselItem key={index}>
+                  <div 
+                    className="cursor-pointer p-1"
+                    onClick={() => openLightbox(img)}
+                  >
+                    <img
+                      src={img}
+                      className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-md hover:opacity-95 transition-opacity"
+                      loading="lazy"
+                      alt={`Gallery image ${index + 1}`}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12" />
+            <CarouselNext className="hidden md:flex -right-12" />
+          </Carousel>
         </motion.div>
-        <p className="text-center text-muted-foreground text-xs mt-2 italic">
-          Scroll to see more
-        </p>
       </div>
 
       {/* Lightbox Modal */}

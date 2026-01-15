@@ -23,7 +23,7 @@ const LargePhotoSection = () => {
         />
       </motion.div>
 
-      <Divider src={images.divider3} className="w-11/12 md:w-1/3" />
+      <Divider src={images.divider3} className="w-11/12 md:w-3/4" />
     </section>
   );
 };

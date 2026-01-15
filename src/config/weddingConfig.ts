@@ -3,10 +3,11 @@
 // Edit this file to customize your wedding invitation
 // ============================================
 
-// import heroMainImage from "@/assets/logo_TS-Monogram.png";
+import heroMainImageBlack from "@/assets/logo_TS-Monogram.png";
 import heroMainImage from "@/assets/TS-Monogram-white.png";
 import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
 // import heroBackgroundImage from "@/assets/hero_background-improved.png";
+import schedule from "@/assets/schedule.png";
 
 export const weddingConfig = {
   // ============================================
@@ -63,10 +64,10 @@ export const weddingConfig = {
     heroMain: heroMainImage,
     divider1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-18.png",
     divider2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-21.png",
-    divider3: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-1.png",
+    divider3: schedule,
     introCard1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_01.png",
     introCard2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_02.png",
-    programIcon: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_03.png",
+    programIcon: heroMainImageBlack,
     dateText: "https://e-card.manitawedding.com/wp-content/uploads/2025/05/LINE_20250522_161709.png",
     namesText: "https://e-card.manitawedding.com/wp-content/uploads/2025/06/R17-052.png",
     largePhoto: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-10-scaled.jpg",
