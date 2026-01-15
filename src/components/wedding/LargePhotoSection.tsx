@@ -6,7 +6,7 @@ const LargePhotoSection = () => {
   const { images } = weddingConfig;
 
   return (
-    <section className="py-4 md:py-6">
+    <section className="py-2 md:py-4">
       <Divider src={images.divider2} />
       
       <motion.div
