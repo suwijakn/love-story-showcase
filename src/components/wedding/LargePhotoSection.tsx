@@ -18,7 +18,7 @@ const LargePhotoSection = () => {
       >
         <img
           src={images.largePhoto}
-          className="w-full object-cover max-h-[80vh] object-top"
+          className="w-full object-cover max-h-[60vh] sm:max-h-[70vh] md:max-h-[80vh] object-top"
           alt="Couple Photo"
         />
       </motion.div>

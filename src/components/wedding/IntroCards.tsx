@@ -12,11 +12,11 @@ const IntroCards = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-10/12 md:w-5/12 text-center"
+          className="w-full sm:w-10/12 md:w-5/12 text-center"
         >
           <img
             src={images.introCard1}
-            className="w-full shadow-lg rounded hover:scale-[1.02] transition-transform duration-500"
+            className="w-full max-w-md mx-auto shadow-lg rounded hover:scale-[1.02] transition-transform duration-500 object-contain"
             alt="Wedding Details 1"
           />
         </motion.div>
@@ -25,11 +25,11 @@ const IntroCards = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-10/12 md:w-5/12 text-center"
+          className="w-full sm:w-10/12 md:w-5/12 text-center"
         >
           <img
             src={images.introCard2}
-            className="w-full shadow-lg rounded hover:scale-[1.02] transition-transform duration-500"
+            className="w-full max-w-md mx-auto shadow-lg rounded hover:scale-[1.02] transition-transform duration-500 object-contain"
             alt="Wedding Details 2"
           />
         </motion.div>

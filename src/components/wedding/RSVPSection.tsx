@@ -64,7 +64,7 @@ const RSVPSection = () => {
         >
           <img
             src={images.rsvpPhoto}
-            className="w-full shadow-xl border-4 border-white rounded"
+            className="w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto shadow-xl border-4 border-white rounded object-cover"
             alt="Couple Photo"
           />
         </motion.div>
