@@ -3,8 +3,10 @@
 // Edit this file to customize your wedding invitation
 // ============================================
 
-import heroMainImage from "@/assets/logo_TS-Monogram.png";
-import heroBackgroundImage from "@/assets/hero_background-improved.png";
+// import heroMainImage from "@/assets/logo_TS-Monogram.png";
+import heroMainImage from "@/assets/TS-Monogram-white.png";
+import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
+// import heroBackgroundImage from "@/assets/hero_background-improved.png";
 
 export const weddingConfig = {
   // ============================================
