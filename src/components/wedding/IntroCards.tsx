@@ -5,7 +5,7 @@ const IntroCards = () => {
   const { images } = weddingConfig;
 
   return (
-    <section className="container mx-auto px-4 py-8">
+    <section className="container mx-auto px-4 py-4 md:py-6">
       <div className="flex flex-col md:flex-row justify-center items-center gap-8">
         <motion.div
           initial={{ opacity: 0, x: -30 }}

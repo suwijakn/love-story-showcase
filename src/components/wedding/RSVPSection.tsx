@@ -5,7 +5,7 @@ const RSVPSection = () => {
   const { rsvp, images } = weddingConfig;
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-8 md:py-12 bg-background">
       <div className="container mx-auto px-4 text-center">
         {/* R.S.V.P Header - styled text with dots */}
         <motion.h2
@@ -13,9 +13,9 @@ const RSVPSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-serif font-light tracking-[0.3em] mb-8"
+          className="text-2xl md:text-3xl font-serif font-light tracking-[0.15em] mb-8"
         >
-          R . S . V . P
+          R.S.V.P
         </motion.h2>
 
         {/* Thai Message - serif italic */}
