@@ -14,7 +14,7 @@ const CountdownSection = () => {
   ];
 
   return (
-    <section id="program" className="py-6 md:py-10 bg-background">
+    <section id="program" className="py-4 md:py-8 bg-background">
       <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Decorative Icon */}
         <motion.img

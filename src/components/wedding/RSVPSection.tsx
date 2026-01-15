@@ -5,7 +5,7 @@ const RSVPSection = () => {
   const { rsvp, images } = weddingConfig;
 
   return (
-    <section className="py-8 md:py-12 bg-background">
+    <section className="py-6 md:py-10 bg-background">
       <div className="container mx-auto px-4 text-center">
         {/* R.S.V.P Header - styled text with dots */}
         <motion.h2
