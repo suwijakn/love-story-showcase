@@ -12,7 +12,7 @@ const Divider = ({ src, className = "w-11/12 md:w-1/2" }: DividerProps) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full flex justify-center py-2 md:py-4"
+      className="w-full flex justify-center py-4 md:py-6"
     >
       <img src={src} className={`opacity-80 object-contain max-w-full ${className}`} alt="Decoration" />
     </motion.div>

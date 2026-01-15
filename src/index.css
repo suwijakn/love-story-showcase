@@ -90,11 +90,6 @@
     scroll-behavior: smooth;
   }
 
-  /* Scroll offset for fixed mobile nav */
-  section[id] {
-    scroll-margin-top: 1rem;
-  }
-
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Prompt', sans-serif;
