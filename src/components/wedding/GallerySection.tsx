@@ -40,7 +40,7 @@ const GallerySection = () => {
   }, [api]);
 
   return (
-    <section id="gallery" className="py-4 md:py-8 bg-background">
+    <section id="gallery" className="py-12 md:py-20 bg-background border-t border-border/30">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
