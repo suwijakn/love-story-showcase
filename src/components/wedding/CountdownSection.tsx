@@ -61,7 +61,7 @@ const CountdownSection = () => {
                 key={item.value}
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
-                className="text-3xl md:text-5xl font-light text-foreground"
+                className="text-3xl md:text-5xl font-extralight text-foreground tracking-wide"
               >
                 {item.value.toString().padStart(2, "0")}
               </motion.span>
