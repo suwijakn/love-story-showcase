@@ -5,7 +5,8 @@
 
 import heroMainImageBlack from "@/assets/logo_TS-Monogram.png";
 import heroMainImage from "@/assets/TS-Monogram-white.png";
-import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
+import heroBackgroundImage from "@/assets/hero_background-anime.jpg";
+// import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
 // import heroBackgroundImage from "@/assets/hero_background-improved.png";
 import schedule from "@/assets/schedule.png";
 
