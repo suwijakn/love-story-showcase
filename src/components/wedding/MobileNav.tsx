@@ -38,19 +38,36 @@ const MobileNav = () => {
               href={item.href}
               className={`flex flex-col items-center justify-center w-full h-full transition-colors ${
                 item.highlighted
-                  ? "text-primary bg-primary/10 relative"
+                  ? "text-[hsl(358,64%,46%)] relative"
                   : "text-muted-foreground hover:bg-muted active:text-primary"
               }`}
             >
-              <Icon 
-                size={item.highlighted ? 22 : 20} 
-                className={`mb-1 ${item.highlighted ? "animate-pulse" : ""}`} 
-              />
+              {item.highlighted ? (
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.15, 1],
+                  }}
+                  transition={{ 
+                    duration: 1.5, 
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="mb-1"
+                >
+                  <Icon size={22} />
+                </motion.div>
+              ) : (
+                <Icon size={20} className="mb-1" />
+              )}
               <span className={`text-[10px] ${item.highlighted ? "font-medium" : ""}`}>
                 {item.label}
               </span>
               {item.highlighted && (
-                <span className="absolute top-1 right-1/2 translate-x-1/2 w-1.5 h-1.5 bg-primary rounded-full" />
+                <motion.span 
+                  animate={{ opacity: [1, 0.5, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="absolute top-1 right-1/2 translate-x-1/2 w-1.5 h-1.5 bg-[hsl(358,64%,46%)] rounded-full" 
+                />
               )}
             </a>
           );
