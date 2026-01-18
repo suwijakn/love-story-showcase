@@ -1,29 +1,79 @@
-import { Heart, Calendar, Image, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Calendar, Clock, Image, Heart, MapPin, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { href: "#home", icon: Heart, label: "Home" },
-  { href: "#program", icon: Calendar, label: "Program" },
+  { href: "#program", icon: Calendar, label: "Calendar" },
+  { href: "#schedule", icon: Clock, label: "Schedule" },
   { href: "#gallery", icon: Image, label: "Gallery" },
+  { href: "#rsvp", icon: Heart, label: "R.S.V.P", highlighted: true },
   { href: "#location", icon: MapPin, label: "Location" },
 ];
 
 const MobileNav = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-background shadow-[0_-2px_10px_rgba(0,0,0,0.1)] z-50 flex justify-around items-center h-16 md:hidden">
-      {navItems.map((item) => {
-        const Icon = item.icon;
-        return (
-          <a
-            key={item.href}
-            href={item.href}
-            className="flex flex-col items-center justify-center text-muted-foreground hover:bg-muted w-full h-full active:text-primary transition-colors"
+    <>
+      {/* Mobile Navigation Bar */}
+      <nav className="fixed bottom-0 left-0 right-0 bg-background shadow-[0_-2px_10px_rgba(0,0,0,0.1)] z-50 flex justify-around items-center h-16 md:hidden">
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`flex flex-col items-center justify-center w-full h-full transition-colors ${
+                item.highlighted
+                  ? "text-primary bg-primary/10 relative"
+                  : "text-muted-foreground hover:bg-muted active:text-primary"
+              }`}
+            >
+              <Icon 
+                size={item.highlighted ? 22 : 20} 
+                className={`mb-1 ${item.highlighted ? "animate-pulse" : ""}`} 
+              />
+              <span className={`text-[10px] ${item.highlighted ? "font-medium" : ""}`}>
+                {item.label}
+              </span>
+              {item.highlighted && (
+                <span className="absolute top-1 right-1/2 translate-x-1/2 w-1.5 h-1.5 bg-primary rounded-full" />
+              )}
+            </a>
+          );
+        })}
+      </nav>
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+            onClick={scrollToTop}
+            className="fixed bottom-20 right-4 z-50 md:hidden w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+            aria-label="Scroll to top"
           >
-            <Icon size={20} className="mb-1" />
-            <span className="text-[10px]">{item.label}</span>
-          </a>
-        );
-      })}
-    </nav>
+            <ChevronUp size={20} />
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
