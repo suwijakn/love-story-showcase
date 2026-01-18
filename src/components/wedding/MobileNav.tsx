@@ -38,8 +38,8 @@ const MobileNav = () => {
               href={item.href}
               className={`flex flex-col items-center justify-center w-full h-full transition-colors ${
                 item.highlighted
-                  ? "text-[hsl(358,64%,46%)] relative"
-                  : "text-muted-foreground hover:bg-muted active:text-primary"
+                  ? "text-[hsl(var(--wedding-red))] relative"
+                  : "text-muted-foreground hover:bg-muted/50 hover:text-[hsl(var(--wedding-red))] active:text-[hsl(var(--wedding-red))]"
               }`}
             >
               {item.highlighted ? (
@@ -66,7 +66,7 @@ const MobileNav = () => {
                 <motion.span 
                   animate={{ opacity: [1, 0.5, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
-                  className="absolute top-1 right-1/2 translate-x-1/2 w-1.5 h-1.5 bg-[hsl(358,64%,46%)] rounded-full" 
+                  className="absolute top-1 right-1/2 translate-x-1/2 w-1.5 h-1.5 bg-[hsl(var(--wedding-red))] rounded-full" 
                 />
               )}
             </a>
@@ -83,7 +83,7 @@ const MobileNav = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2 }}
             onClick={scrollToTop}
-            className="fixed bottom-20 right-4 z-50 md:hidden w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-muted-foreground hover:text-[hsl(358,64%,46%)] hover:border-[hsl(358,64%,46%)] transition-colors"
+            className="fixed bottom-20 right-4 z-50 md:hidden w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-muted-foreground hover:text-[hsl(var(--wedding-red))] hover:border-[hsl(var(--wedding-red))] transition-colors"
             aria-label="Scroll to top"
           >
             <ChevronUp size={20} />
