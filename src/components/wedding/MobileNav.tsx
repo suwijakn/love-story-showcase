@@ -83,7 +83,7 @@ const MobileNav = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2 }}
             onClick={scrollToTop}
-            className="fixed bottom-20 right-4 z-50 md:hidden w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+            className="fixed bottom-20 right-4 z-50 md:hidden w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-muted-foreground hover:text-[hsl(358,64%,46%)] hover:border-[hsl(358,64%,46%)] transition-colors"
             aria-label="Scroll to top"
           >
             <ChevronUp size={20} />
