@@ -3,24 +3,24 @@
 // Edit this file to customize your wedding invitation
 // ============================================
 
-import heroMainImageBlack from "@/assets/logo_TS-Monogram.png";
+import heroMainImageBlack from "@/assets/logo_TS-Monogram.webp";
 // import introCard from "@/assets/name_logo.png";
 
-import heroMainImage from "@/assets/TS-Monogram-white.png";
+import heroMainImage from "@/assets/TS-Monogram-white.webp";
 
-import heroBackgroundImage from "@/assets/hero_background-anime.png";
+import heroBackgroundImage from "@/assets/hero_background-anime.webp";
 // import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
 // import heroBackgroundImage from "@/assets/hero_background-improved.png";
 
-import schedule from "@/assets/schedule.png";
-import divider1 from "@/assets/divider1.png";
+import schedule from "@/assets/schedule.webp";
+// import divider1 from "@/assets/divider1.png";
 
 // import yourPresence from "@/assets/your_presence.png";
-import yourPresence from "@/assets/full_section_cropped.png";
+import yourPresence from "@/assets/full_section_cropped.webp";
 import dateEvent from "@/assets/date.png";
 import scheduleTitle from "@/assets/schedule_title.png";
-import largePhoto from "@/assets/largePhoto.jpeg";
-import rsvpPhoto from '@/assets/rsvp_photo.jpeg'
+import largePhoto from "@/assets/largePhoto.webp";
+import rsvpPhoto from '@/assets/rsvp_photo.webp'
 import snapshotGif from "@/assets/snapshot.gif";
 
 export const weddingConfig = {
@@ -64,7 +64,7 @@ export const weddingConfig = {
   // RSVP INFORMATION
   // ============================================
   rsvp: {
-    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeSm2ywJBxV6uqrbjHFUQbNLG6SuVDqo_hfoJjRI2AD5lCPiw/viewform?usp=sf_link",
+    formUrl: "https://forms.gle/naAwas4PGqET38e37",
     message: "เพื่อให้เราสามารถวางแผนในการดูแลท่าน ซึ่งเป็นแขกคนสำคัญได้อย่างเต็มที่ ขอรบกวนทุกท่านทำแบบตอบรับการเข้าร่วมงานให้เราด้วยนะคะ/ครับ",
     buttonText: "กดเพื่อลงทะเบียนเข้าร่วมงาน",
     subtitle: "Hope to see you at our wedding",

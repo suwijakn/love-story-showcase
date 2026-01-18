@@ -42,6 +42,7 @@
     --gold-light: 30 40% 70%;
     --cream: 0 0% 100%;
     --warm-gray: 0 0% 100%;
+    --wedding-red: 358 64% 46%;
   }
 
   .dark {
@@ -78,6 +79,7 @@
     --gold-light: 30 40% 70%;
     --cream: 30 10% 15%;
     --warm-gray: 30 5% 12%;
+    --wedding-red: 358 64% 46%;
   }
 }
 
@@ -127,8 +129,15 @@
   }
 
   .btn-outline {
-    @apply inline-block px-8 py-3 border-2 border-primary text-primary rounded-full 
-           hover:bg-primary hover:text-primary-foreground transition-colors duration-300 
+    border-color: hsl(var(--wedding-red));
+    color: hsl(var(--wedding-red));
+    @apply inline-block px-8 py-3 border-2 rounded-full 
+           transition-colors duration-300 
            uppercase tracking-wider text-sm font-medium;
+  }
+
+  .btn-outline:hover {
+    background-color: hsl(var(--wedding-red));
+    color: hsl(var(--primary-foreground));
   }
 }

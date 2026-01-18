@@ -5,7 +5,7 @@ const RSVPSection = () => {
   const { rsvp, images } = weddingConfig;
 
   return (
-    <section className="py-12 md:py-20 bg-muted/30 border-t border-border/30">
+    <section className="pt-8 pb-12 md:pb-20 bg-muted/30 border-t border-border/30">
       <div className="container mx-auto px-4 text-center">
         {/* R.S.V.P Header - styled text with dots */}
         <motion.h2
@@ -49,7 +49,7 @@ const RSVPSection = () => {
           href={rsvp.formUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-8 py-3 border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition-colors duration-300 text-sm font-light tracking-wider"
+          className="btn-outline"
         >
           {rsvp.buttonText}
         </motion.a>
