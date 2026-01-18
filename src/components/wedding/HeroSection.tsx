@@ -20,7 +20,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center pt-12 md:pt-16">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-6 md:pt-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const HeroSection = () => {
         >
           <img
             src={images.heroMain}
-            className="w-[60%] sm:w-[50%] md:w-[35%] lg:w-[28%] max-w-md object-contain"
+            className="w-[51%] sm:w-[42%] md:w-[30%] lg:w-[24%] max-w-md object-contain"
             alt="Couple Names"
           />
         </motion.div>
