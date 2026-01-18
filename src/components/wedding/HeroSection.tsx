@@ -29,7 +29,7 @@ const HeroSection = () => {
         >
           <img
             src={images.heroMain}
-            className="w-[51%] sm:w-[42%] md:w-[30%] lg:w-[24%] max-w-md object-contain"
+            className="w-[46%] sm:w-[38%] md:w-[27%] lg:w-[22%] max-w-md object-contain"
             alt="Couple Names"
           />
         </motion.div>

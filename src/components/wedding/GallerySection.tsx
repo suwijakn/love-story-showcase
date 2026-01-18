@@ -51,7 +51,7 @@ const GallerySection = () => {
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-2">Gallery</h2>
       </motion.div>
 
-      {/* Video */}
+      {/* Video replaced by GIF */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,20 +59,17 @@ const GallerySection = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex justify-center mb-10 px-4"
       >
-        <div className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            className="w-full h-full"
-            src={gallery.videoUrl}
-            title="Wedding Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
+        <div className="w-full max-w-3xl rounded-lg overflow-hidden shadow-lg bg-muted flex items-center justify-center">
+          <img
+            className="w-full h-auto object-contain"
+            src={gallery.snapshotGif}
+            alt="Wedding Snapshot"
           />
         </div>
       </motion.div>
 
       {/* Image Carousel */}
-      <div className="container mx-auto px-4 md:px-12">
+      {/* <div className="container mx-auto px-4 md:px-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -109,10 +106,10 @@ const GallerySection = () => {
             <CarouselNext className="hidden md:flex -right-12" />
           </Carousel>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Lightbox Modal */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {lightboxOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -140,7 +137,7 @@ const GallerySection = () => {
             />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </section>
   );
 };

@@ -4,11 +4,24 @@
 // ============================================
 
 import heroMainImageBlack from "@/assets/logo_TS-Monogram.png";
+// import introCard from "@/assets/name_logo.png";
+
 import heroMainImage from "@/assets/TS-Monogram-white.png";
-import heroBackgroundImage from "@/assets/hero_background-anime.jpg";
+
+import heroBackgroundImage from "@/assets/hero_background-anime.png";
 // import heroBackgroundImage from "@/assets/hero_background-improved-blue.png";
 // import heroBackgroundImage from "@/assets/hero_background-improved.png";
+
 import schedule from "@/assets/schedule.png";
+import divider1 from "@/assets/divider1.png";
+
+// import yourPresence from "@/assets/your_presence.png";
+import yourPresence from "@/assets/full_section_cropped.png";
+import dateEvent from "@/assets/date.png";
+import scheduleTitle from "@/assets/schedule_title.png";
+import largePhoto from "@/assets/largePhoto.jpeg";
+import rsvpPhoto from '@/assets/rsvp_photo.jpeg'
+import snapshotGif from "@/assets/snapshot.gif";
 
 export const weddingConfig = {
   // ============================================
@@ -63,24 +76,24 @@ export const weddingConfig = {
   images: {
     heroBackground: heroBackgroundImage,
     heroMain: heroMainImage,
-    divider1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-18.png",
-    divider2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Asset-21.png",
+    // divider1: divider1,
+    divider2: scheduleTitle,
     divider3: schedule,
-    introCard1: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_01.png",
-    introCard2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_02.png",
+    // introCard1: introCard,
+    // introCard2: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/R17-052_02.png",
     programIcon: heroMainImageBlack,
-    dateText: "https://e-card.manitawedding.com/wp-content/uploads/2025/05/LINE_20250522_161709.png",
-    namesText: "https://e-card.manitawedding.com/wp-content/uploads/2025/06/R17-052.png",
-    largePhoto: "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-10-scaled.jpg",
-    rsvpHeader: "https://e-card.manitawedding.com/wp-content/uploads/2025/07/Asset-25-768x154-1.png",
-    rsvpPhoto: "https://e-card.manitawedding.com/wp-content/uploads/2024/11/R17-050-5-1-scaled.jpg",
+    dateText: yourPresence,
+    namesText: dateEvent,
+    largePhoto: largePhoto,
+    // rsvpHeader: "https://e-card.manitawedding.com/wp-content/uploads/2025/07/Asset-25-768x154-1.png",
+    rsvpPhoto: rsvpPhoto,
   },
 
   // ============================================
   // GALLERY SECTION
   // ============================================
   gallery: {
-    videoUrl: "https://www.youtube-nocookie.com/embed/3sxwcJh4Q5s?si=ykUmNZ-EQPnqgZfC&controls=0",
+    snapshotGif: snapshotGif,
     images: [
       "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-2-scaled.jpg",
       "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-3-scaled.jpg",

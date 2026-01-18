@@ -17,7 +17,7 @@ const CountdownSection = () => {
     <section id="program" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4 flex flex-col items-center">
         {/* Decorative Icon */}
-        <motion.img
+        {/* <motion.img
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ const CountdownSection = () => {
           src={images.programIcon}
           className="w-20 sm:w-24 md:w-32 mb-6 object-contain"
           alt="Program Icon"
-        />
+        /> */}
 
         {/* Date Graphics */}
         <motion.img

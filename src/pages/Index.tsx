@@ -14,14 +14,14 @@ const Index = () => {
   return (
     <div className="relative pb-16 md:pb-0">
       <HeroSection />
-      <Divider src={weddingConfig.images.divider1} />
-      <IntroCards />
+      {/* <Divider src={weddingConfig.images.divider1} />
+      <IntroCards /> */}
       <CountdownSection />
       <LargePhotoSection />
       <GallerySection />
       <RSVPSection />
       <LocationSection />
-      <Footer />
+      {/* <Footer /> */}
       <MobileNav />
     </div>
   );
