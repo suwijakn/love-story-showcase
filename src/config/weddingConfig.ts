@@ -67,7 +67,7 @@ export const weddingConfig = {
     formUrl: "https://forms.gle/naAwas4PGqET38e37",
     message: "To ensure we can provide the best possible experience for our distinguished guests, we kindly ask that you confirm your attendance.",
     buttonText: "กดเพื่อลงทะเบียนเข้าร่วมงาน",
-    subtitle: "Hope to see you at our wedding",
+    subtitle: "With love, we await you",
   },
 
   // ============================================

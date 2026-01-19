@@ -41,18 +41,38 @@ const RSVPSection = () => {
         </motion.p>
 
         {/* Button - outline style with rounded pill */}
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          href={rsvp.formUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-outline"
+          className="flex justify-center"
         >
-          {rsvp.buttonText}
-        </motion.a>
+          <motion.a
+            animate={{
+              scale: [1, 1.05, 1],
+              boxShadow: [
+                "0 0 0 0px rgba(184, 42, 47, 0)",
+                "0 0 0 10px rgba(184, 42, 47, 0.1)",
+                "0 0 0 0px rgba(184, 42, 47, 0)"
+              ]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileTap={{ scale: 0.95 }}
+            href={rsvp.formUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            {rsvp.buttonText}
+          </motion.a>
+        </motion.div>
 
         {/* Photo section */}
         <motion.div

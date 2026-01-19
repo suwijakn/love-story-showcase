@@ -46,7 +46,7 @@ const LocationSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-muted-foreground mb-6 flex items-center justify-center gap-2"
         >
-          <MapPin size={16} />
+          <MapPin className="w-5 h-5" />
           {venue.address}
         </motion.p>
 
