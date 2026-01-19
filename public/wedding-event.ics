@@ -9,10 +9,11 @@ DTSTAMP:20250615T100000Z
 DTSTART;TZID=Asia/Bangkok:20260220T180000
 DTEND;TZID=Asia/Bangkok:20260220T210000
 SUMMARY:Wedding: Guy & Pinky
-DESCRIPTION:Join us to celebrate the wedding of Guy & Pinky!
-LOCATION:Rin at Raintree, Sila Hall
+DESCRIPTION:Join us to celebrate the wedding of Guy & Pinky!\n\nGoogle Maps Link:\nhttps://www.google.com/maps/search/?api=1&query=Rin+at+Raintree+Bangkok&query_place_id=ChIJc1q9i4Kf4jARMgzWoSrmyG0
+LOCATION:Raintree\, Sila Hall, 276 Rama IX Soi 17, Bang Kapi, Bangkok
+GEO:13.762005;100.593056
 STATUS:CONFIRMED
-SEQUENCE:0
+SEQUENCE:2
 BEGIN:VALARM
 TRIGGER:-PT24H
 DESCRIPTION:Reminder: Guy & Pinky Wedding tomorrow
