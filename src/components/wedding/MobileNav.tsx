@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Calendar, Clock, Image, Heart, MapPin, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import MusicPlayer from "./MusicPlayer";
 
 const navItems = [
   { href: "#program", icon: Calendar, label: "Calendar" },
@@ -12,6 +13,7 @@ const navItems = [
 
 const MobileNav = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isMusicVisible, setIsMusicVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,9 +76,11 @@ const MobileNav = () => {
         })}
       </nav>
 
+      <MusicPlayer onClose={() => setIsMusicVisible(false)} />
+
       {/* Scroll to Top Button */}
       <AnimatePresence>
-        {showScrollTop && (
+        {!isMusicVisible && showScrollTop && (
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

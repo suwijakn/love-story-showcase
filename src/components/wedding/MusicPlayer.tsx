@@ -1,17 +1,26 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MusicPlayer = () => {
+interface MusicPlayerProps {
+  onClose?: () => void;
+}
+
+const MusicPlayer = ({ onClose }: MusicPlayerProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [text, setText] = useState("Tap for Music 🎵");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  const handleClose = () => {
+    setIsVisible(false);
+    if (onClose) onClose();
+  };
+
   useEffect(() => {
     // Initial 5-second timer to hide if user ignores
     timerRef.current = setTimeout(() => {
-      setIsVisible(false);
+      handleClose();
     }, 5000);
 
     return () => {
@@ -39,7 +48,7 @@ const MusicPlayer = () => {
 
     // Start new timer to hide bubble after 3 seconds
     timerRef.current = setTimeout(() => {
-      setIsVisible(false);
+      handleClose();
     }, 3000);
   };
 
@@ -52,14 +61,14 @@ const MusicPlayer = () => {
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="fixed top-3 right-3 z-50 cursor-pointer"
+            className="fixed bottom-20 right-4 z-50 cursor-pointer md:hidden"
             onClick={handleTap}
           >
-            <div className={`bg-white/60 backdrop-blur-sm border border-gold/30 shadow-sm rounded-full px-2.5 py-1 flex items-center text-[10px] font-medium text-foreground ${!isPlaying ? 'animate-gentle-bounce' : ''}`}>
+            <div className={`bg-white/60 backdrop-blur-sm border border-gold/30 shadow-md rounded-full px-4 h-10 flex items-center text-[10px] font-medium text-foreground ${!isPlaying ? 'animate-gentle-bounce' : ''}`}>
               <span>{text}</span>
             </div>
           </motion.div>

@@ -44,9 +44,8 @@ const LocationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-muted-foreground mb-6 flex items-center justify-center gap-2"
+          className="text-muted-foreground mb-6"
         >
-          <MapPin className="w-5 h-5" />
           {venue.address}
         </motion.p>
 
