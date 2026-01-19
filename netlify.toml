@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "dist"
 
+# Force the .ics file to be downloaded, preventing "Subscribe" behavior on iOS
+[[headers]]
+  for = "/wedding-event.ics"
+  [headers.values]
+    Content-Disposition = "attachment; filename=wedding-event.ics"
+    Content-Type = "text/calendar"
+
 # This is CRITICAL for React Apps.
 # It redirects all traffic to index.html so React Router works.
 [[redirects]]

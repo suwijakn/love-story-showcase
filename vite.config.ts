@@ -8,6 +8,15 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    configureServer: (server) => {
+      server.middlewares.use((req, res, next) => {
+        if (req.url?.includes('.ics')) {
+          res.setHeader('Content-Disposition', 'attachment; filename="wedding-event.ics"');
+          res.setHeader('Content-Type', 'text/calendar');
+        }
+        next();
+      });
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   assetsInclude: ["**/*.GIF"],
