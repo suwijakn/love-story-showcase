@@ -45,7 +45,7 @@ export const weddingConfig = {
     date: new Date("2026-02-20T18:00:00"), // Updated date/time
     dateDisplay: "20 February 2026",       // Updated display text
     time: "18:00 - 21:00",                 // Updated time
-    calendarFile: "/wedding-event.ics",    
+    calendarFile: "/wedding-event.ics?openExternalBrowser=1",    
   },
 
   // ============================================
