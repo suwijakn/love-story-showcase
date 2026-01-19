@@ -57,15 +57,18 @@ const GallerySection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="flex justify-center mb-10 px-4"
+        className="flex flex-col items-center mb-10 px-4"
       >
-        <div className="w-full max-w-3xl rounded-lg overflow-hidden shadow-lg bg-muted flex items-center justify-center">
+        <div className="w-full max-w-3xl rounded-lg overflow-hidden shadow-lg bg-muted flex items-center justify-center mb-4">
           <img
             className="w-full h-auto object-contain"
             src={gallery.snapshotGif}
             alt="Wedding Snapshot"
           />
         </div>
+        <p className="text-center font-serif italic text-muted-foreground text-lg md:text-xl">
+          The chaotic moments leading up to the big YES 💍
+        </p>
       </motion.div>
 
       {/* Image Carousel */}
