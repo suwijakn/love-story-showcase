@@ -64,9 +64,9 @@ export const weddingConfig = {
   // ============================================
   rsvp: {
     formUrl: "https://forms.gle/naAwas4PGqET38e37?openExternalBrowser=1",
-    message: "To ensure we can provide the best possible experience for our distinguished guests, we kindly ask that you confirm your attendance.",
-    buttonText: "กดเพื่อลงทะเบียนเข้าร่วมงาน",
-    subtitle: "With love, we await you",
+    message: "วันสำคัญของเราจะสมบูรณ์ไม่ได้เลยถ้าขาดคุณ รบกวนช่วยยืนยันการมาร่วมงาน เพื่อให้เราได้เตรียมต้อนรับทุกคนอย่างดีที่สุด",
+    buttonText: "กดเพื่อ R.S.V.P",
+    subtitle: "",
   },
 
   // ============================================

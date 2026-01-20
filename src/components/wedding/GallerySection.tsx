@@ -70,7 +70,7 @@ const GallerySection = () => {
           />
         </div>
         <p className="text-center font-serif italic text-muted-foreground text-lg md:text-xl">
-          The chaotic moments leading up to the big YES 💍
+          Plot twist: It wasn't a prank. Now please RSVP 😌✨
         </p>
       </motion.div>
 

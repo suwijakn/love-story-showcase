@@ -26,7 +26,7 @@ const RSVPSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-6 font-serif italic text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground"
         >
-          "{rsvp.message}"
+          {rsvp.message}
         </motion.p>
 
         {/* Subtitle - serif italic uppercase */}
