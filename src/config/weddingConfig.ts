@@ -21,7 +21,6 @@ import dateEvent from "@/assets/date.png";
 import scheduleTitle from "@/assets/schedule_title.png";
 import largePhoto from "@/assets/largePhoto.webp";
 import rsvpPhoto from '@/assets/rsvp_photo.webp'
-import snapshotGif from "@/assets/snapshot.gif";
 
 export const weddingConfig = {
   // ============================================
@@ -93,7 +92,7 @@ export const weddingConfig = {
   // GALLERY SECTION
   // ============================================
   gallery: {
-    snapshotGif: snapshotGif,
+    snapshotSource: "/snapshot.mp4",
     images: [
       "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-2-scaled.jpg",
       "https://e-card.manitawedding.com/wp-content/uploads/2024/12/Photo_R17-051-3-scaled.jpg",

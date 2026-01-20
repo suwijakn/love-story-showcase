@@ -60,10 +60,13 @@ const GallerySection = () => {
         className="flex flex-col items-center mb-10 px-4"
       >
         <div className="w-full max-w-3xl rounded-lg overflow-hidden shadow-lg bg-muted flex items-center justify-center mb-4">
-          <img
+          <video
+            src={gallery.snapshotSource}
             className="w-full h-auto object-contain"
-            src={gallery.snapshotGif}
-            alt="Wedding Snapshot"
+            autoPlay
+            loop
+            muted
+            playsInline
           />
         </div>
         <p className="text-center font-serif italic text-muted-foreground text-lg md:text-xl">
