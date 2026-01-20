@@ -31,6 +31,11 @@ const MusicPlayer = ({ onClose }: MusicPlayerProps) => {
   const handleTap = () => {
     if (isPlaying) return;
 
+    // Track music play event
+    if (window.sa_event) {
+      window.sa_event("music_played_click");
+    }
+
     // Clear the initial timer
     if (timerRef.current) clearTimeout(timerRef.current);
 

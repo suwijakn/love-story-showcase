@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
@@ -16,6 +16,12 @@ const GallerySection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
   const [api, setApi] = useState<CarouselApi>();
+
+  // Video tracking refs and state
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [timeVisible, setTimeVisible] = useState(0);
+  const trackedMilestones = useRef<Set<number>>(new Set());
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const openLightbox = (imgUrl: string) => {
     setCurrentImage(imgUrl);
@@ -39,6 +45,57 @@ const GallerySection = () => {
     return () => clearInterval(intervalId);
   }, [api]);
 
+  // Video visibility tracking
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Start timer if not already running
+            if (!timerRef.current) {
+              timerRef.current = setInterval(() => {
+                setTimeVisible((prev) => prev + 1);
+              }, 1000);
+            }
+          } else {
+            // Stop timer
+            if (timerRef.current) {
+              clearInterval(timerRef.current);
+              timerRef.current = null;
+            }
+          }
+        });
+      },
+      { threshold: 0.5 } // Consider visible when 50% is in viewport
+    );
+
+    observer.observe(videoElement);
+
+    return () => {
+      observer.disconnect();
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, []);
+
+  // Check milestones
+  useEffect(() => {
+    const milestones = [5, 15, 30];
+    
+    milestones.forEach((milestone) => {
+      if (timeVisible >= milestone && !trackedMilestones.current.has(milestone)) {
+        trackedMilestones.current.add(milestone);
+        if (window.sa_event) {
+          window.sa_event("video_watched_milestone", { duration_seconds: milestone });
+        }
+      }
+    });
+  }, [timeVisible]);
+
   return (
     <section id="about-us" className="py-12 md:py-20 bg-background border-t border-border/30">
       <motion.div
@@ -61,6 +118,7 @@ const GallerySection = () => {
       >
         <div className="w-full max-w-3xl rounded-lg overflow-hidden shadow-lg bg-muted flex items-center justify-center mb-4">
           <video
+            ref={videoRef}
             src={gallery.snapshotSource}
             className="w-full h-auto object-contain"
             autoPlay
