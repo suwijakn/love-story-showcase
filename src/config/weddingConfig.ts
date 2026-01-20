@@ -21,6 +21,7 @@ import dateEvent from "@/assets/date.png";
 import scheduleTitle from "@/assets/schedule_title.png";
 import largePhoto from "@/assets/largePhoto.webp";
 import rsvpPhoto from '@/assets/rsvp_photo.webp'
+import suwijakLogo from '@/assets/suwijak-logo-v2.svg';
 
 export const weddingConfig = {
   // ============================================
@@ -114,9 +115,9 @@ export const weddingConfig = {
   // ============================================
   footer: {
     poweredByText: "Powered by",
-    logo: "https://e-card.manitawedding.com/wp-content/uploads/2022/10/LogoManita_New_2020.png",
-    linkText: "การ์ดแต่งงานมานิตาเวดดิ้ง",
-    linkUrl: "https://www.manitawedding.com/",
+    logo: suwijakLogo,
+    linkText: "suwijak.nim@gmail.com",
+    linkUrl: "mailto:suwijak.nim@gmail.com",
   },
 };
 

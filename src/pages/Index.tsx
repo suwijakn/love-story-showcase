@@ -21,7 +21,7 @@ const Index = () => {
       <GallerySection />
       <RSVPSection />
       <LocationSection />
-      {/* <Footer /> */}
+      <Footer />
       <MobileNav />
     </div>
   );
