@@ -52,9 +52,9 @@ const RSVPSection = () => {
             animate={{
               scale: [1, 1.05, 1],
               boxShadow: [
-                "0 0 0 0px rgba(184, 42, 47, 0)",
-                "0 0 0 10px rgba(184, 42, 47, 0.1)",
-                "0 0 0 0px rgba(184, 42, 47, 0)"
+                "0 0 0 0px rgba(120, 106, 6, 0)",
+                "0 0 0 10px rgba(120, 106, 6, 0.1)",
+                "0 0 0 0px rgba(120, 106, 6, 0)"
               ]
             }}
             transition={{
