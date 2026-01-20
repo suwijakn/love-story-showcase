@@ -84,7 +84,7 @@ const GallerySection = () => {
 
   // Check milestones
   useEffect(() => {
-    const milestones = [5, 15, 30];
+    const milestones = [5, 15, 30, 45, 60, 90];
     
     milestones.forEach((milestone) => {
       if (timeVisible >= milestone && !trackedMilestones.current.has(milestone)) {
