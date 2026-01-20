@@ -6,7 +6,7 @@ import MusicPlayer from "./MusicPlayer";
 const navItems = [
   { href: "#program", icon: Calendar, label: "Calendar" },
   { href: "#schedule", icon: Clock, label: "Schedule" },
-  { href: "#gallery", icon: Image, label: "Gallery" },
+  { href: "#about-us", icon: Image, label: "About Us" },
   { href: "#rsvp", icon: Heart, label: "R.S.V.P", highlighted: true },
   { href: "#location", icon: MapPin, label: "Location" },
 ];

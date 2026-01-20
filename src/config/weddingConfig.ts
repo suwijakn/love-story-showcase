@@ -114,10 +114,10 @@ export const weddingConfig = {
   // FOOTER
   // ============================================
   footer: {
-    poweredByText: "Powered by",
-    logo: suwijakLogo,
+    poweredByText: "Powered by Suwijak - Guy",
+    logo: "",
     linkText: "suwijak.nim@gmail.com",
-    linkUrl: "mailto:suwijak.nim@gmail.com",
+    linkUrl: "",
   },
 };
 

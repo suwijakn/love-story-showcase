@@ -40,7 +40,7 @@ const GallerySection = () => {
   }, [api]);
 
   return (
-    <section id="gallery" className="py-12 md:py-20 bg-background border-t border-border/30">
+    <section id="about-us" className="py-12 md:py-20 bg-background border-t border-border/30">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const GallerySection = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-8"
       >
-        <h2 className="text-3xl md:text-4xl font-serif font-normal mb-2">Gallery</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-normal mb-2">About Us</h2>
       </motion.div>
 
       {/* Video replaced by GIF */}
